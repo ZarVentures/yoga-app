@@ -1,0 +1,140 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Rumana Rab Holistic Yoga — global design system.
+ * Palette: warm cream, sage, dark green, warm gold, light sage.
+ * All colors are oklch tokens. Never hardcode colors in components.
+ */
+
+@theme inline {
+  --radius: 0.625rem;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Karla", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+
+  /* Brand tokens */
+  --color-cream: var(--cream);
+  --color-sage: var(--sage);
+  --color-sage-deep: var(--sage-deep);
+  --color-forest: var(--forest);
+  --color-forest-foreground: var(--forest-foreground);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-light-sage: var(--light-sage);
+  --color-surface: var(--surface);
+
+  --shadow-soft: 0 1px 2px oklch(0.3821 0.0429 157.62 / 0.04), 0 8px 24px
+    oklch(0.3821 0.0429 157.62 / 0.06);
+  --shadow-lifted: 0 2px 6px oklch(0.3821 0.0429 157.62 / 0.06), 0 18px 40px
+    oklch(0.3821 0.0429 157.62 / 0.1);
+}
+
+:root {
+  --radius: 0.875rem;
+
+  --cream: oklch(0.97 0.0082 91.48);
+  --sage: oklch(0.6173 0.0563 147.34);
+  --sage-deep: oklch(0.5482 0.054 147.42);
+  --forest: oklch(0.3821 0.0429 157.62);
+  --forest-foreground: oklch(0.97 0.0082 91.48);
+  --gold: oklch(0.7637 0.0963 71.19);
+  --gold-foreground: oklch(0.276 0.0233 248.68);
+  --light-sage: oklch(0.9449 0.0119 145.48);
+  --surface: oklch(1 0 0);
+
+  --background: var(--cream);
+  --foreground: oklch(0.276 0.0233 248.68);
+  --card: var(--surface);
+  --card-foreground: var(--foreground);
+  --popover: var(--surface);
+  --popover-foreground: var(--foreground);
+  --primary: var(--sage);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: var(--light-sage);
+  --secondary-foreground: var(--forest);
+  --muted: var(--light-sage);
+  --muted-foreground: oklch(0.5444 0.035 265.11);
+  --accent: var(--light-sage);
+  --accent-foreground: var(--forest);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(0.9125 0.0154 145.45);
+  --input: oklch(0.9125 0.0154 145.45);
+  --ring: var(--sage);
+}
+
+@layer base {
+  html {
+    font-size: 1.0625rem;
+  }
+
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    color: var(--color-forest);
+    letter-spacing: -0.01em;
+  }
+}
+
+@utility container-page {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 80rem;
+  padding-inline: 1.25rem;
+
+  @media (min-width: 1024px) {
+    padding-inline: 2.5rem;
+  }
+}
+
+@utility eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-sage-deep);
+}
