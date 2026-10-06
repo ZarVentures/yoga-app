@@ -4,6 +4,7 @@
  */
 export const SITE = {
   name: "Rumana Rab Holistic Yoga",
+  url: "https://www.rumanaholisticyoga.com",
   tagline: "Holistic yoga, breath and nutrition guidance for a calmer, stronger everyday life.",
   contact: {
     address:

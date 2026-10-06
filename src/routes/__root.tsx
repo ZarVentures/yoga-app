@@ -10,6 +10,7 @@ import {
 import { type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import { SITE } from "../data/site";
 
 function NotFoundComponent() {
   return (
@@ -80,7 +81,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { name: "author", content: "Rumana Rab Holistic Yoga" },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: SITE.url },
+      { property: "og:site_name", content: SITE.name },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:site", content: "@RumanaYoga" },
     ],
     links: [
       {
@@ -93,6 +97,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Karla:wght@300;400;500;600;700&display=swap",
       },
+      { rel: "canonical", href: SITE.url },
       { rel: "icon", href: "/rumana-rab-favicon.png", type: "image/png", sizes: "512x512" },
       { rel: "apple-touch-icon", href: "/rumana-rab-favicon.png" },
     ],
