@@ -56,7 +56,7 @@ export function JourneySection() {
             <p className="eyebrow">The Journey</p>
             <h2 className="mt-3 text-3xl lg:text-4xl">A Personal Journey Into Yoga</h2>
             <p className="mt-6 text-base leading-[1.6] text-muted-foreground">
-              Rumana Rab Certified Yoga Therapist & Holistic Wellness Expert, in Dubai. over 19+
+              Rumana Rab Certified Yoga Therapist & Holistic Wellness Expert, in Dubai. over 23+
               years of experience in yoga. Rumana has realized her vision of yoga by line the
               foundation of her yoga studio, “Rumana Rab Holistic Yoga”.
             </p>

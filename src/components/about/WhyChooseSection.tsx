@@ -47,7 +47,7 @@ export function WhyChooseSection() {
         </h2>
 
         <p className="mx-auto mt-3 max-w-[950px] text-center text-[15px] font-normal leading-[1.5] text-[#405348]">
-          At Rumana Rab Holistic yoga Centre, we combine 19 years of yoga experience with a
+          At Rumana Rab Holistic yoga Centre, we combine 23+ years of yoga experience with a
           personalized approach to support your individual wellbeing journey.
         </p>
 

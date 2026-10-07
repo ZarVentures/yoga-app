@@ -30,11 +30,11 @@ export const TRAINERS: Trainer[] = [
     designation:
       "Founder of Rumana Rab Holistic Yoga Center | Yoga Therapist & Prenatal Yoga Expert",
     designationShort: "Yoga Therapist & Prenatal Yoga Expert",
-    experience: "23 Years of Experience in Dubai",
+    experience: "23+ Years of Experience in Dubai",
     experienceShort: "23+ Years of Experience",
     bio: "Rumana Rab is a highly experienced yoga therapist specializing in therapeutic yoga, chronic pain management, prenatal yoga and holistic wellness. Her approach combines personalized yoga practices with mindful movement, breathwork and lifestyle guidance.",
     biography:
-      "Rumana Rab has over 23 years of experience and specializes in Yoga Therapy, chronic back pain, arthritis, hypertension and prenatal yoga.\n\nHer expertise includes Hatha, Vinyasa and therapeutic yoga, with personalized practices designed to improve mobility, strength, flexibility, pain management and overall wellbeing.\n\nShe also provides holistic guidance for stress, anxiety and emotional wellbeing through mindful movement, breathwork, meditation, lifestyle guidance and personalized diet plans.\n\nHer compassionate approach helps individuals build a healthier and more balanced life through therapeutic yoga.",
+      "Rumana Rab has over 23+ years of experience and specializes in Yoga Therapy, chronic back pain, arthritis, hypertension and prenatal yoga.\n\nHer expertise includes Hatha, Vinyasa and therapeutic yoga, with personalized practices designed to improve mobility, strength, flexibility, pain management and overall wellbeing.\n\nShe also provides holistic guidance for stress, anxiety and emotional wellbeing through mindful movement, breathwork, meditation, lifestyle guidance and personalized diet plans.\n\nHer compassionate approach helps individuals build a healthier and more balanced life through therapeutic yoga.",
     specialisations: [
       "Yoga Therapy",
       "Prenatal Yoga",

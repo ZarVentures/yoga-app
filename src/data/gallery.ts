@@ -49,7 +49,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     id: "gallery-1",
     type: "image",
     category: "classes",
-    alt: "Celebrating 20 Years of Yoga & Wellness",
+    alt: "Celebrating 23+ Years of Yoga & Wellness",
     src: "/gallery/gallery1.jpg",
   },
   {

@@ -14,7 +14,7 @@ export function WelcomeSection() {
             Holistic Centre
           </h2>
           <p className="mt-6 text-base leading-[1.6] text-muted-foreground">
-            At Rumana Rab Holistic Yoga, we believe yoga is more than physical practice. With 23
+            At Rumana Rab Holistic Yoga, we believe yoga is more than physical practice. With 23+
             years of experience in yoga, Rumana Rab brings together traditional yogic practices with
             a holistic approach designed to support the individual as a whole — body, mind, and
             breath. It is a journey towards greater awareness, inner balance, and a healthier way of
