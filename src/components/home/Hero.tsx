@@ -70,14 +70,14 @@ export function Hero() {
     >
       <Carousel setApi={setApi} opts={{ align: "start", loop: true }}>
         <CarouselContent className="ml-0">
-          {HERO_SLIDES.map((slide) => (
+          {HERO_SLIDES.map((slide, index) => (
             <CarouselItem key={slide.label} className="pl-0">
-              <div className="relative aspect-[4/3] min-h-[400px] w-full overflow-hidden sm:aspect-[16/9] sm:min-h-[480px] lg:aspect-[21/9] lg:min-h-0">
+              <div className="relative aspect-[4/3] min-h-[440px] w-full overflow-hidden sm:aspect-[16/9] sm:min-h-[480px] lg:aspect-[21/9] lg:min-h-0">
                 <img
                   src={slide.src}
                   alt={slide.alt}
-                  loading="lazy"
-                  className="absolute inset-0 size-full object-cover"
+                  loading={index === 0 ? "eager" : "lazy"}
+                  className="absolute inset-0 size-full object-cover object-center"
                 />
               </div>
             </CarouselItem>
@@ -91,10 +91,10 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/25 to-transparent"
       />
 
-      <div className="pointer-events-none absolute inset-0 z-10 flex items-center pb-12 lg:items-center lg:pb-0">
+      <div className="pointer-events-none absolute inset-0 z-10 flex items-center pb-20 sm:pb-24 lg:pb-0">
         <div className="container-page pointer-events-auto w-full">
-          <div className="max-w-2xl">
-            <p className="relative text-xs font-semibold uppercase tracking-[0.22em] text-gold sm:text-sm">
+          <div className="max-w-xl sm:max-w-2xl">
+            <p className="relative text-xs font-semibold uppercase tracking-[0.14em] text-gold sm:text-sm sm:tracking-[0.22em]">
               <span
                 aria-hidden="true"
                 className="absolute inset-0 -z-10 rounded-full bg-gold/35 blur-xl"
@@ -104,13 +104,13 @@ export function Hero() {
                 Welcome to Rumana Rab Holistic Yoga
               </span>
             </p>
-            <h1 className="mt-4 text-4xl leading-tight  text-[#f0bf4c] font-semibold sm:text-5xl lg:text-6xl">
+            <h1 className="mt-3 text-3xl leading-tight text-[#f0bf4c] font-semibold sm:mt-4 sm:text-5xl lg:text-6xl">
               Heal. Strengthen. Transform.
             </h1>
-            <p className="mt-4 max-w-xl text-base leading-relaxed text-white sm:text-lg">
+            <p className="mt-3 max-w-xl text-sm leading-relaxed text-white sm:mt-4 sm:text-lg">
               A peaceful space where movement, mindfulness, and inner wellness come together.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-6 flex flex-wrap gap-2 sm:mt-8 sm:gap-3">
               <Button asChild variant="cta" size="lg" className="rounded-md">
                 <Link to="/contact">Book Classes</Link>
               </Button>
@@ -127,12 +127,12 @@ export function Hero() {
       </div>
 
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10">
-        <div className="container-page flex items-center justify-between gap-4 pb-4 sm:pb-6">
+        <div className="container-page flex items-center justify-between gap-4 pb-3 sm:gap-6 sm:pb-6">
           <button
             type="button"
             aria-label="Previous slide"
             onClick={() => api?.scrollPrev()}
-            className="pointer-events-auto grid size-10 shrink-0 place-items-center rounded-full border border-cream/40 bg-black/30 text-cream backdrop-blur-sm transition-colors hover:bg-black/60"
+            className="pointer-events-auto grid size-9 shrink-0 place-items-center rounded-full border border-cream/40 bg-black/30 text-cream backdrop-blur-sm transition-colors hover:bg-black/60 sm:size-10"
           >
             <ArrowLeft className="size-4" aria-hidden="true" />
           </button>
@@ -161,7 +161,7 @@ export function Hero() {
             type="button"
             aria-label="Next slide"
             onClick={() => api?.scrollNext()}
-            className="pointer-events-auto grid size-10 shrink-0 place-items-center rounded-full border border-cream/40 bg-black/30 text-cream backdrop-blur-sm transition-colors hover:bg-black/60"
+            className="pointer-events-auto grid size-9 shrink-0 place-items-center rounded-full border border-cream/40 bg-black/30 text-cream backdrop-blur-sm transition-colors hover:bg-black/60 sm:size-10"
           >
             <ArrowRight className="size-4" aria-hidden="true" />
           </button>

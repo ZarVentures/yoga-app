@@ -9,7 +9,7 @@ export function MissionVisionSection() {
         <CardShell
           icon={<Target className="size-5" aria-hidden="true" strokeWidth={2.5} />}
           heading="Our Mission"
-          text="Our mission is to make yoga a meaningful part of everyday life. With 19 years of experience, we offer personalized practices that support the body, breath, and mind."
+          text="Our mission is to make yoga a meaningful part of everyday life. With 23+ years of experience, we offer personalized practices that support the body, breath, and mind."
         />
         <CardShell
           icon={<Eye className="size-5" aria-hidden="true" strokeWidth={2.5} />}

@@ -38,7 +38,7 @@ function Page() {
               Explore Our Gallery
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-foreground/75 sm:text-base">
-              Browse the moments that make our studio a home — from daily classes and workshops to
+              Browse the moments that make our studio a home - from daily classes and workshops to
               retreats and the people who share this journey.
             </p>
           </div>
