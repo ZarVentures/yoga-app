@@ -11,9 +11,7 @@ const title = "Contact — Rumana Rab Holistic Yoga";
 const description = "Get in touch to book a session or ask a question.";
 
 export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: seoMeta(title, description),
-  }),
+  head: () => seoMeta(title, description, "/contact"),
   component: Page,
 });
 

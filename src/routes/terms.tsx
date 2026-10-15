@@ -8,9 +8,7 @@ const title = "Terms and Conditions — Rumana Rab Holistic Yoga";
 const description = "The terms that apply when using our website and services.";
 
 export const Route = createFileRoute("/terms")({
-  head: () => ({
-    meta: seoMeta(title, description),
-  }),
+  head: () => seoMeta(title, description, "/terms"),
   component: Page,
 });
 

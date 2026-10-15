@@ -11,9 +11,7 @@ const title = "Packages — Rumana Rab Holistic Yoga";
 const description = "Membership and session packages for every practice level.";
 
 export const Route = createFileRoute("/packages")({
-  head: () => ({
-    meta: seoMeta(title, description),
-  }),
+  head: () => seoMeta(title, description, "/packages"),
   component: Page,
 });
 

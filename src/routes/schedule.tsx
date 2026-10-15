@@ -10,9 +10,7 @@ const title = "Schedule — Rumana Rab Holistic Yoga";
 const description = "Weekly class timings and session availability.";
 
 export const Route = createFileRoute("/schedule")({
-  head: () => ({
-    meta: seoMeta(title, description),
-  }),
+  head: () => seoMeta(title, description, "/schedule"),
   component: Page,
 });
 
