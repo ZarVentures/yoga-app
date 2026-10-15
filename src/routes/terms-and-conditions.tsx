@@ -9,9 +9,7 @@ const description =
   "The terms and conditions that apply when using our studio, classes, and services.";
 
 export const Route = createFileRoute("/terms-and-conditions")({
-  head: () => ({
-    meta: seoMeta(title, description),
-  }),
+  head: () => seoMeta(title, description, "/terms-and-conditions"),
   component: Page,
 });
 

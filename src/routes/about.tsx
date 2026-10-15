@@ -14,9 +14,7 @@ const title = "About — Rumana Rab Holistic Yoga";
 const description = "The story and philosophy behind Rumana Rab Holistic Yoga.";
 
 export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: seoMeta(title, description),
-  }),
+  head: () => seoMeta(title, description, "/about"),
   component: Page,
 });
 

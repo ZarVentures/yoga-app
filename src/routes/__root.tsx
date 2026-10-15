@@ -97,7 +97,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Karla:wght@300;400;500;600;700&display=swap",
       },
-      { rel: "canonical", href: SITE.url },
       { rel: "icon", href: "/rumana-rab-favicon.png", type: "image/png", sizes: "512x512" },
       { rel: "apple-touch-icon", href: "/rumana-rab-favicon.png" },
     ],

@@ -13,9 +13,7 @@ const description =
   "Holistic yoga, breathwork and nutrition guidance — therapy yoga, prenatal yoga, meditation and more.";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: seoMeta(title, description),
-  }),
+  head: () => seoMeta(title, description),
   component: Index,
 });
 

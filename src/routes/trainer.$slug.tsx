@@ -18,9 +18,7 @@ export const Route = createFileRoute("/trainer/$slug")({
       };
     }
     const title = `${loaderData.trainer.name} — Rumana Rab Holistic Yoga`;
-    return {
-      meta: seoMeta(title, loaderData.trainer.bio),
-    };
+    return seoMeta(title, loaderData.trainer.bio, `/trainer/${loaderData.trainer.slug}`);
   },
   component: TrainerPage,
 });

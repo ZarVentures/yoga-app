@@ -11,9 +11,7 @@ const description =
   "Stories, insights and inspiration for your wellness journey — yoga, mindfulness, nutrition, therapy and lifestyle articles by Rumana Rab.";
 
 export const Route = createFileRoute("/blog/")({
-  head: () => ({
-    meta: seoMeta(title, description),
-  }),
+  head: () => seoMeta(title, description, "/blog"),
   component: Page,
 });
 

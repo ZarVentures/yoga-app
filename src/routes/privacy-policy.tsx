@@ -8,9 +8,7 @@ const title = "Privacy Policy — Rumana Rab Holistic Yoga";
 const description = "How we handle and protect your personal information.";
 
 export const Route = createFileRoute("/privacy-policy")({
-  head: () => ({
-    meta: seoMeta(title, description),
-  }),
+  head: () => seoMeta(title, description, "/privacy-policy"),
   component: Page,
 });
 

@@ -13,9 +13,7 @@ const description =
   "Moments of healing, growth and togetherness from our classes, workshops, events and community.";
 
 export const Route = createFileRoute("/gallery")({
-  head: () => ({
-    meta: seoMeta(title, description),
-  }),
+  head: () => seoMeta(title, description, "/gallery"),
   component: Page,
 });
 
