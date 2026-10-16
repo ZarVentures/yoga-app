@@ -110,14 +110,14 @@ export function Hero() {
             <p className="mt-3 max-w-xl text-sm leading-relaxed text-white sm:mt-4 sm:text-lg">
               A peaceful space where movement, mindfulness, and inner wellness come together.
             </p>
-            <div className="mt-6 flex flex-wrap gap-2 sm:mt-8 sm:gap-3">
-              <Button asChild variant="cta" size="lg" className="rounded-md">
+            <div className="mx-auto mt-6 flex w-full max-w-[15rem] flex-col gap-2.5 sm:mx-0 sm:mt-8 sm:max-w-none sm:flex-row sm:flex-wrap sm:gap-3">
+              <Button asChild variant="cta" size="lg" className="w-full rounded-md sm:w-auto">
                 <Link to="/contact">Book Classes</Link>
               </Button>
               <Button
                 asChild
                 size="lg"
-                className="border border-cream/40 bg-transparent text-cream hover:bg-cream/10 hover:text-cream"
+                className="w-full border border-cream/40 bg-transparent text-cream hover:bg-cream/10 hover:text-cream sm:w-auto"
               >
                 <Link to="/classes">Explore Programs</Link>
               </Button>

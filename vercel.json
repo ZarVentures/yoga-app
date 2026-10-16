@@ -1,4 +1,15 @@
 {
   "framework": "tanstack-start",
-  "buildCommand": "npm run build"
+  "buildCommand": "npm run build",
+  "redirects": [
+    {
+      "source": "/schedule.php",
+      "has": [{ "type": "query", "key": "page" }],
+      "destination": "/schedule",
+      "permanent": true
+    },
+    { "source": "/about.php", "destination": "/about", "permanent": true },
+    { "source": "/schedule.php", "destination": "/schedule", "permanent": true },
+    { "source": "/classes.php", "destination": "/classes", "permanent": true }
+  ]
 }

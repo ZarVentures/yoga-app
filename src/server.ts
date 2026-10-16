@@ -37,15 +37,56 @@ async function normalizeCatastrophicSsrResponse(response: Response): Promise<Res
 
 function isH3SwallowedErrorBody(body: string): boolean {
   try {
-    const payload = JSON.parse(body) as { unhandled?: unknown; message?: unknown };
+    const payload = JSON.parse(body) as { unhandled?: boolean; message?: string };
     return payload.unhandled === true && payload.message === "HTTPError";
   } catch {
     return false;
   }
 }
 
+/**
+ * Legacy URLs from the old PHP site (e.g. /about.php, /schedule.php?page=schedule)
+ * still rank in Google and 404 today. Map known ones to their clean routes and
+ * send anything else *.php to home — permanent 301s, query strings dropped.
+ * Runs in the server entry, so every deployment path (dev, Cloudflare, Vercel
+ * Build Output `__server` catch-all) applies it before SSR.
+ */
+const LEGACY_PHP_ROUTES: Record<string, string> = {
+  "/about": "/about",
+  "/schedule": "/schedule",
+  "/classes": "/classes",
+  "/trainers": "/trainers",
+  "/trainer": "/trainers",
+  "/packages": "/packages",
+  "/gallery": "/gallery",
+  "/blog": "/blog",
+  "/contact": "/contact",
+  "/privacy-policy": "/privacy-policy",
+  "/terms": "/terms",
+  "/terms-and-conditions": "/terms-and-conditions",
+  "/index": "/",
+  "/home": "/",
+  "/main": "/",
+};
+
+function legacyPhpRedirect(request: Request): Response | null {
+  if (request.method !== "GET" && request.method !== "HEAD") return null;
+  const url = new URL(request.url);
+  const match = /^(.*?)\.php\/?$/i.exec(url.pathname);
+  if (!match) return null;
+  const base = (match[1] || "/").toLowerCase();
+  const destination = LEGACY_PHP_ROUTES[base] ?? "/";
+  return new Response(null, {
+    status: 301,
+    headers: { location: destination },
+  });
+}
+
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
+    const redirect = legacyPhpRedirect(request);
+    if (redirect) return redirect;
+
     try {
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
