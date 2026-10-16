@@ -80,6 +80,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content: "Holistic yoga, breathwork and nutrition guidance.",
       },
       { name: "author", content: "Rumana Rab Holistic Yoga" },
+      {
+        name: "google-site-verification",
+        content: "26ZWKn44Ut66XuIRUD2cM0K1klHCtsyQq85ADC_-uSw",
+      },
       { property: "og:type", content: "website" },
       { property: "og:url", content: SITE.url },
       { property: "og:site_name", content: SITE.name },
